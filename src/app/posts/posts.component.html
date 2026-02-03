@@ -1,0 +1,19 @@
+<header class="page-header">
+  <h1>Community Feed</h1>
+</header>
+
+<main class="posts-container">
+  <section class="posts-wrapper">
+    <article class="post-card" *ngFor="let post of posts">
+      <div class="post-content">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <p class="post-description">
+          {{ post.description }}
+        </p>
+      </div>
+      <button class="delete-button" (click)="deletePost(post.id)">
+        Delete
+      </button>
+    </article>
+  </section>
+</main>
